@@ -35,5 +35,11 @@
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Own.Backend\Own.Backend.csproj">
+      <Project>{2FD0D827-C318-400D-BB06-29620DBE2E04}</Project>
+      <Name>Own.Backend</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

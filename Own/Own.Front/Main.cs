@@ -1,4 +1,5 @@
 ﻿using System;
+using Own.Backend.Logger;
 
 namespace Own.Front
 {
@@ -6,7 +7,26 @@ namespace Own.Front
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ILogger logger = new FileLogger();
+
+            try
+            {
+                logger.Log(logBuilder  => logBuilder
+                    .AddContent("hello")
+                    .AddNewLine()
+                    .AddContent("hello2")
+                    .AddNewLine()
+                    .AddOSVersion()
+                );
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+
+
         }
     }
 }

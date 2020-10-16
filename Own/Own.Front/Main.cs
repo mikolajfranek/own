@@ -1,5 +1,5 @@
 ﻿using System;
-using Own.Backend.Logger;
+using Own.Backend.Loggers;
 
 namespace Own.Front
 {

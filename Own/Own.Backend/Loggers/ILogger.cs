@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Own.Backend.Logger
+namespace Own.Backend.Loggers
 {
     public interface ILogger
     {

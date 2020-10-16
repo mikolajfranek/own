@@ -2,7 +2,7 @@
 using System.Text;
 using Own.Backend.Components;
 
-namespace Own.Backend.Logger
+namespace Own.Backend.Loggers
 {
     public class FileLogger : ILogger
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Own.Backend.Logger
+namespace Own.Backend.Loggers
 {
     public class ConsoleLogger : ILogger
     {

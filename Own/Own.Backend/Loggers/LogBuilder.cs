@@ -45,5 +45,14 @@ namespace Own.Backend.Loggers
             }
             return this;
         }
+
+        public LogBuilder AddDefaultContent()
+        {
+            this.AddCurrentDateAndTime()
+                .AddNewLine()
+                .AddOSVersion()
+                .AddNewLine();
+            return this;
+        }
     }
 }

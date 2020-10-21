@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Own.Backend.Loggers;
 
 namespace Own.Front
@@ -7,26 +8,21 @@ namespace Own.Front
     {
         public static void Main(string[] args)
         {
-            ILogger logger = new FileLogger();
-
             try
             {
-                logger.Log(logBuilder  => logBuilder
-                    .AddContent("hello")
-                    .AddNewLine()
-                    .AddContent("hello2")
-                    .AddNewLine()
-                    .AddOSVersion()
-                );
+                Parallel.For(0, 10, i =>
+                {
+                    ILogger logger = new FileLogger();
+                    logger.Log(logBuilder => logBuilder
+                       .AddDefaultContent()
+                   );
+                });
+
             }
             catch(Exception e)
             {
                 Console.WriteLine(e);
             }
-
-
-
-
         }
     }
 }

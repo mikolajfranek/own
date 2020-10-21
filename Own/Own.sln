@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Own.Backend", "Own.Backend\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Own.Business", "Own.Business\Own.Business.csproj", "{5724B9E5-9270-468F-BA54-41230CCBE3BC}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Own.About", "Own.About\Own.About.shproj", "{1E2E3303-AA16-40EE-9D11-A20C42398372}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86

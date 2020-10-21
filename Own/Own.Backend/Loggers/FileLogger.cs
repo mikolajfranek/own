@@ -14,7 +14,10 @@ namespace Own.Backend.Loggers
         {
             StringBuilder stringBuilder = new StringBuilder();
             action(new LogBuilder(stringBuilder));
-            FileComponent.SaveContent(filePath, stringBuilder.ToString());
+            lock (BackendConfiguration.IDENT_CRITICAL_SECTION_LOGGER_FILE)
+            {
+                FileComponent.SaveContent(filePath, stringBuilder.ToString());
+            }
         }
     }
 }

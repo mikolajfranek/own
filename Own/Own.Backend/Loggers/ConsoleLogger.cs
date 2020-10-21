@@ -11,7 +11,10 @@ namespace Own.Backend.Loggers
         {
             StringBuilder stringBuilder = new StringBuilder();
             action(new LogBuilder(stringBuilder));
-            Console.WriteLine(stringBuilder);
+            lock (BackendConfiguration.IDENT_CRITICAL_SECTION_LOGGER_CONSOLE)
+            {
+                Console.WriteLine(stringBuilder);
+            }
         }
     }
 }

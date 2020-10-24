@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Own.Backend.NullObjects;
 
 namespace Own.Backend.Loggers
 {
@@ -7,11 +8,13 @@ namespace Own.Backend.Loggers
     {
         public ConsoleLogger() { }
 
+        private static Null<object> IDENT_CRITICAL_SECTION = new Null<object>();
+
         public void Log(Action<LogBuilder> action)
         {
             StringBuilder stringBuilder = new StringBuilder();
             action(new LogBuilder(stringBuilder));
-            lock (BackendConfiguration.IDENT_CRITICAL_SECTION_LOGGER_CONSOLE)
+            lock (IDENT_CRITICAL_SECTION)
             {
                 Console.WriteLine(stringBuilder);
             }

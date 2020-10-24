@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using Own.Backend.Components;
+using Own.Backend.NullObjects;
 
 namespace Own.Backend.Loggers
 {
@@ -8,15 +9,16 @@ namespace Own.Backend.Loggers
     {
         public FileLogger() { }
 
-        private const string filePath = "/home/debian/Dokumenty/Logowania/OwnLog.txt";
+        private static Null<object> IDENT_CRITICAL_SECTION = new Null<object>();
+        private const string FILE_PATH = "/home/debian/Dokumenty/Logowania/OwnLog.txt";
 
         public void Log(Action<LogBuilder> action)
         {
             StringBuilder stringBuilder = new StringBuilder();
             action(new LogBuilder(stringBuilder));
-            lock (BackendConfiguration.IDENT_CRITICAL_SECTION_LOGGER_FILE)
+            lock (IDENT_CRITICAL_SECTION)
             {
-                FileComponent.SaveContent(filePath, stringBuilder.ToString());
+                FileComponent.SaveContent(FILE_PATH, stringBuilder.ToString());
             }
         }
     }

@@ -46,11 +46,13 @@
     <Compile Include="Loggers\LogBuilder.cs" />
     <Compile Include="BackendConfiguration.cs" />
     <Compile Include="NullObjects\Null.cs" />
+    <Compile Include="Components\PaginationComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Loggers\" />
     <Folder Include="Components\" />
     <Folder Include="NullObjects\" />
+    <Folder Include="Abstracts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -10,6 +10,10 @@ namespace Own.Front
         {
             try
             {
+                Console.WriteLine("Start program");
+
+
+                /*
                 Parallel.For(0, 10, i =>
                 {
                     ILogger logger = new FileLogger();
@@ -17,9 +21,11 @@ namespace Own.Front
                        .AddDefaultContent()
                    );
                 });
+                */
 
+                Console.WriteLine("End program");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e);
             }

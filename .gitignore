@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Database
+Own/Own.About/Database/tracks.txt
+Own/Own.About/Database/listening.txt

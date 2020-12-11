@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Own.Business", "Own.Busines
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Own.About", "Own.About\Own.About.shproj", "{1E2E3303-AA16-40EE-9D11-A20C42398372}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Own.Migration", "Own.Migration\Own.Migration.csproj", "{4884B7BE-5DDA-478D-B035-E1E9115AA230}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -27,5 +29,9 @@ Global
 		{5724B9E5-9270-468F-BA54-41230CCBE3BC}.Debug|x86.Build.0 = Debug|Any CPU
 		{5724B9E5-9270-468F-BA54-41230CCBE3BC}.Release|x86.ActiveCfg = Release|Any CPU
 		{5724B9E5-9270-468F-BA54-41230CCBE3BC}.Release|x86.Build.0 = Release|Any CPU
+		{4884B7BE-5DDA-478D-B035-E1E9115AA230}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4884B7BE-5DDA-478D-B035-E1E9115AA230}.Debug|x86.Build.0 = Debug|Any CPU
+		{4884B7BE-5DDA-478D-B035-E1E9115AA230}.Release|x86.ActiveCfg = Release|Any CPU
+		{4884B7BE-5DDA-478D-B035-E1E9115AA230}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
